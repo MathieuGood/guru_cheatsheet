@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<title>Guru Cheat Sheet</title>
+	<meta charset="UTF-8" name="viewport" content="intial-scale=1, width=device-width">
+
+	<link rel="stylesheet" href="dracula.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+
+</head>
+	
+<body>
+<article>
+<h4>Lambda functions</h4>
+<pre><code class="python">	
+>>> def add(x, y):
+	return x + y
+
+>>> add(5, 3)
+8
+
+# Is equivalent to the lambda function:
+>>> add = lambda x, y: x + y
+>>> add(5, 3)
+8
+
+# It's not even need to bind it to a name like add before:
+>>> (lambda x, y: x + y)(5, 3)
+8
+</code></pre>	
+
+
+<h4>Directories</h4>
+<pre><code class="python">	
+>>> import os
+
+>>> os.getcwd()
+'C:\\Python34'
+>>> os.chdir('C:\\Windows\\System32')
+
+>>> os.getcwd()
+'C:\\Windows\\System32'
+</code></pre>	
+
+<h4>Datetime</h4>
+<pre><code class="python">	
+# Convert string to datetime
+date_str = '29/12/2017'
+format_str = '%d/%m/%Y'
+datetime_obj = datetime.strptime(date_str, format_str)
+print(datetime_obj.date())
+</code></pre>	
+
+
+<h4>Strings</h4>
+<pre><code class="python">
+# Rouding floats
+print(f"{valeur:.2f}")
+
+# Upper and lowercase testing
+>>> 'HELLO'.isupper()
+True
+
+>>> 'HELLO'.islower()
+False
+
+# Justifying Text with rjust(), ljust(), and center()
+rjust() and ljust():
+
+>>> 'Hello World'.rjust(20)
+'         Hello World'
+>>> 'Hello'.ljust(10)
+'Hello     '
+
+>>> 'Hello'.rjust(20, '*')
+'***************Hello'
+
+# Removing Whitespace with strip(), rstrip(), and lstrip()
+>>> spam = '    Hello World     '
+>>> spam.strip()
+'Hello World'
+
+>>> spam.lstrip()
+'Hello World '
+
+>>> spam.rstrip()
+'    Hello World'
+
+>>> spam = 'SpamSpamBaconSpamEggsSpamSpam'
+>>> spam.strip('ampS')
+'BaconSpamEggs'
+</code></pre>	
+
+
+<h4>Dictionnaries</h4>
+<pre><code class="python">
+# Print all key names in the dictionary
+for x in thisdict:
+	print(x)
+# Print all values in the dictionary
+for x in thisdict:
+	print(thisdict[x])
+</code></pre>	
+
+
+<h4>Lists</h4>
+<pre><code class="python">
+# List comprehension
+>>> a = [1, 3, 5, 7, 9, 11]
+>>> [i - 1 for i in a]
+[0, 2, 4, 6, 8, 10]
+
+# Insert 10 at 4th index 
+>>> list1 = [ 1, 2, 3, 4, 5, 6, 7 ] 
+>>> list1.insert(4, 10) 
+>>> print(list1) 
+[1, 2, 3, 4, 10, 5, 6, 7]
+
+# Insert z at the front of the list
+>>> list2 = ['a', 'b', 'c', 'd', 'e'] 
+>>> list2.insert(0, 'z')
+>>> print(list2)
+['z', 'a', 'b', 'c', 'd', 'e']
+</code></pre>	
+
+
+<h4>Flask</h4>
+<pre><code class="python">
+flask run --host=0.0.0.0
+# or
+app.run(host="0.0.0.0")
+</code></pre>
+
+<h4>Pandas</h4>
+<pre><code class="python">
+# Import DF
+df = pd.DataFrame(list_name)
+
+# Import DF and set columns
+df = pd.DataFrame (list_name, columns = ['column1_name'])
+
+# Set column names
+df.columns = ['fruit', 'quantity']
+
+# Convert the date to datetime64
+df['date'] = pd.to_datetime(df['date'], format='%Y-%m-%d')
+
+# Sort by column
+df.sort_values('col1', ascending=False)
+  
+# Filter data between two dates
+filtered_df = df.query("'20201201' <= date_fa <= '20201231'")
+
+# Replaces all NaN values of the df with 0
+euro_famcli_y_pt.fillna(0)
+
+</code></pre>
+
+<h4>Open CSV and loop</h4>
+<pre><code>
+with open('base_client.csv') as csv_cli:
+	header = next(csv_cli)
+	for line in csv_cli:
+		client, cat, name = line.replace('"', '').strip().split(';')
+</code></pre>
+
+
+<h4>VIM</h4>
+<pre><code>
+SAVE :w
+QUIT :q
+SAVE AND QUIT 
+</code></pre>
+
+
+<h4>BASH</h4>
+<pre><code>
+# Size of directory
+du -hs your_directory
+</code></pre>
+
+<h4>BASH</h4>
+<pre><code>
+# Scan network for devices
+nmap -sP 192.168.1.0/24
+</code></pre>
+
+<h4>Windows Terminal</h4>
+<pre><code>
+# Acces Synology NAS via SSH
+ssh guru@192.168.1.10 -p 9292 -i ~/id_rsa
+</code></pre>
+
+<h4>Git</h4>
+<pre><code>
+git config --global user.name "MathieuGood"
+git config --global user.email "bon.mathieu@gmail.com"
+
+
+git status
+
+git init
+
+git add script.py
+git add *
+git add --all
+
+git remote add origin https://github.com/Microsoft/windows.git
+git push origin master
+
+git pull
+
+git log
+
+# Visualiser l'URL du répertoire distant
+git remote -v
+git remote show origin
+
+
+# Remplacer message d'un commit pas encore push
+git commit --amend -m "New commit message"
+
+</code></pre>
+
+</article>
+
+
+</body>
+</html>
