@@ -19,7 +19,7 @@ const movieCount = favoriteMovies.length
 let a = 1
 let b = a
 a = 2
-// OUPUT : b = 1
+// OUPUT : b = 1 != a
 // Behaviour with primitive values types (str, bool, number)
 
 // Copy by reference
