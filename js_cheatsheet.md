@@ -1,12 +1,12 @@
 # JavaScript Cheat Sheet
 
 ```js
-// Declare variable and constant
+// Variable and constant
 let i = 2
 let status = false
 const message = "hello"
 
-// Declare array
+// Array
 let favoriteMovies = ["Jurassic Park", "Scream", "Alien"]
 // Add element at the end of the array
 favoriteMovies.push("Dune")
