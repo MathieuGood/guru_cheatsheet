@@ -62,3 +62,6 @@ sudo systemctl stop SERVICE_NAME
 sudo systemctl start SERVICE_NAME
 sudo systemctl restart SERVICE_NAME
 ```
+
+List network devices
+```nmap -sP 192.168.1.0/24```
