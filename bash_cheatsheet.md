@@ -19,6 +19,7 @@ Change owner of file
 ```chown OWNER[:GROUP] FILE```
 ```chown :GROUP FILE```
 
+
 Change owner of current directory recursively
 ```chown OWNER:GROUP . -R```
 
@@ -35,14 +36,14 @@ Change permission of file
 | 2   | 2(w)               | -w-        |
 | 1   | 1(x)               | --x        |
 
+```chmod u=rwx,g=rx,o=r myfile.txt```
 
-setgid on directory : all the newly created files in this directory belong to the directory's owning group 
-
-First digit of chmod sequence
+First digit of chmod sequence 
 ```
 setuid=4
 setgid=2
 sticky=1
+setgid on directory : all the newly created files in this directory belong to the directory's owning group 
 ```
 
 Folders
@@ -55,7 +56,7 @@ Folders
 /sbin > Applications 
 ```
 
-Stop and start service
+Stop/start/restart service
 ```
 sudo systemctl stop SERVICE_NAME
 sudo systemctl start SERVICE_NAME
