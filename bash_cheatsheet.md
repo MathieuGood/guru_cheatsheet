@@ -44,3 +44,20 @@ setuid=4
 setgid=2
 sticky=1
 ```
+
+Folders
+``` 
+/etc > config files
+/usr > User specific files
+/home > User folder
+/var/logs > Log files
+/bin > Applications
+/sbin > Applications 
+```
+
+Stop and start service
+```
+sudo systemctl stop SERVICE_NAME
+sudo systemctl start SERVICE_NAME
+sudo systemctl restart SERVICE_NAME
+```
