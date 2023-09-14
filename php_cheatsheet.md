@@ -4,6 +4,14 @@
 // Variables
 $myVariable = 0;
 $name = "Mathieu";
+var_dump($name);
+
+// Print PHP config
+phpinfo();
+
+// Checking equality
+// "1" == 1 >> TRUE
+// "1" === 1 >> FALSE
 
 // Arrays
 $namesArray = [$name, "John", "Paul", "James"];
@@ -11,6 +19,8 @@ $namesArray = [$name, "John", "Paul", "James"];
 $recipes = array('Guacamole', 'Taco', 'Hamburger');
 $recipes[3] = 'Pizza';
 $recipes[] = 'Mac and cheese';
+$recipes = array(2 =>'Guacamole', 3 => 'Taco', 4 => 'Hamburger');
+$recipes = array("Guacamole" => "Mexican", "Taco" => "Mexican");
 
 $recipe = [
     'title' => 'Pizza',
@@ -29,7 +39,7 @@ echo $myVariable;
 echo 'hello ' . $name . ' and welcome!';
 
 // Conditionals
-// AND > &&
+// AND >> &&
 // OR >> || 
 if ($totalPrice > $totalBudget) {
     echo "Price higher than budget";
