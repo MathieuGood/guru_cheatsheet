@@ -65,3 +65,8 @@ sudo systemctl restart SERVICE_NAME
 
 List network devices
 ```nmap -sP 192.168.1.0/24```
+
+Find files and directories
+```find -name```
+
+https://www.linuxtricks.fr/wiki/find-rechercher-et-bien-plus
