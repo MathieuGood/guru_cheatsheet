@@ -28,4 +28,7 @@ git remote show origin
 # Replace a commit message
 git commit --amend -m "New commit message"
 
+# Create branch named "develop" and switch to this branch
+git rebase -b develop
+
 ```
