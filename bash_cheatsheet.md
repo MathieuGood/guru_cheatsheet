@@ -1,8 +1,38 @@
 # Bash Cheatsheet
 
-Create file with text in it
+Execute command before another with "`"
+```echo hello `whoami` ```
+
+Start process in the background with "&"
+```vi &```
+
+Suspend process
+```Ctrl + Z```
+
+Go back to process
+```fg```
+
+All processes of current user
+```ps a```
+
+All processes of all users
+```ps aux```
+
+All processes in a tree
+```psstree``
+
+Find "apache" process
+```ps aux | grep apache```
+
+Create file with text in it with '>' or '>>'
 ```echo "Adds text and overwrite current file if exists" > test.txt```
 ```echo "Adds text and concatenates it to the current file if exists" >> test.txt```
+
+Create file to get error message with '2>'
+```echoooo "There is an error in the command" 2> error.txt```
+
+Create file with current vi processesm, replace spaces by ; and write to file
+```ps | grep vi | tr " " ";" > process_list.csv```
 
 List all processes running
 ```ps -afux```
