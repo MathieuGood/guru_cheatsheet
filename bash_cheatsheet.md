@@ -1,5 +1,9 @@
 # Bash Cheatsheet
 
+Create file with text in it
+```echo "Adds text and overwrite current file if exists" > test.txt```
+```echo "Adds text and concatenates it to the current file if exists" >> test.txt```
+
 List all processes running
 ```ps -afux```
 
