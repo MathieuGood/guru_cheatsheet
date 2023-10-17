@@ -4,6 +4,9 @@
 # Init folder as git repository
 git init
 
+# Init folder as remote git repository
+git init . --bare
+
 # Set config
 git config --global user.name "MathieuGood"
 git config --global user.email "bon.mathieu@gmail.com"
@@ -37,19 +40,26 @@ git log --online
 git remote -v
 git remote show origin
 
+# Change remote directory URL
+git remote set-url origin remote_url
+
 # Create new branch
 git branch new_branch_name
+
+# Delete branch
+git branch -d branch_to_delete
+git branch -D branch_to_delete
 
 # List local branches
 git branch
 
-# List remote branches
+# List available branches
 git branch -r
 
 # Fetch remote branch to local branch
 git fetch origin dev_remote_branch
 
-# Set HEAD to a previous commit proviging its commit hash
+# Set HEAD to a previous commit providing its commit hash
 git checkout commit_hash
 
 # Replace a commit message
@@ -61,6 +71,14 @@ git rebase -b develop
 # Switch branch
 git switch branch_to_switch_to
 
+# Merge branch B into branch A including commit messages
+git merge branch_b
+
+# Merge and stop at commit message to edit
+git merge branch_b --no-ff
+
+# Merge and don't commit any message, just add files
+git merge branch_b --squash
 
 
 ```
